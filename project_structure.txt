@@ -1,0 +1,42 @@
+TODO * Refactor working app to integrate the configuration request for api resiliency
+.
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── aaron
+│   │   │           └── letterboxd
+│   │   │               ├── LetterboxdApplication.java
+│   │   │               ├── config
+│   │   │               │   ├── AppConfig.java               # Existing static configuration
+│   │   │               │   ├── DynamicConfigProperties.java # Maps dynamic properties
+│   │   │               │   ├── DynamicConfigLoader.java     # Service to fetch config updates
+│   │   │               │   └── ConfigRefreshScheduler.java  # Optional: Scheduler for refresh
+│   │   │               ├── controller
+│   │   │               │   └── CsvProcessingController.java
+│   │   │               ├── entities
+│   │   │               │   ├── Movie.java
+│   │   │               │   ├── Rating.java
+│   │   │               │   └── Watchlist.java
+│   │   │               ├── repositories
+│   │   │               │   ├── ConfigRepository.java        # Optional: For database config
+│   │   │               │   ├── MovieRepository.java
+│   │   │               │   ├── RatingRepository.java
+│   │   │               │   └── WatchlistRepository.java
+│   │   │               └── services
+│   │   │                   ├── CsvProcessingService.java
+│   │   │                   ├── DirectoryTraversalService.java
+│   │   │                   ├── DynamicConfigService.java     # Handles config integration
+│   │   │                   ├── EntityMappingService.java
+│   │   │                   ├── MovieApiService.java
+│   │   │                   └── MovieInitializationService.java
+│   │   └── resources
+│   │       ├── application.properties                        # Base static config
+│   │       ├── bootstrap.properties                          # Optional: Spring Cloud Config
+│   │       └── dynamic-config                                # Optional: External config
+│   └── test
+│       └── java
+│           └── com
+│               └── aaron
+│                   └── letterboxd
+│                       └── LetterboxdApplicationTests.java
