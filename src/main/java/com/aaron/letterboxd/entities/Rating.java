@@ -1,28 +1,39 @@
 package com.aaron.letterboxd.entities;
-
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
-public class Watchlist {
+public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = " ")
+    private Double rating;
+
+    @Column(name = " ")
     private LocalDate date;
 
     @OneToOne
-    @JoinColumn
+    @JoinColumn(name = "movie_id", nullable = false)
     private Movie movie;
 
-    public Watchlist() {
+    public Rating() {
     }
 
-    public Watchlist(LocalDate date, Movie movie) {
+    public Rating(Double rating, LocalDate date, Movie movie) {
+        this.rating = rating;
         this.date = date;
         this.movie = movie;
+    }
+
+    public Double getRating() {
+        return rating;
+    }
+
+    public void setRating(Double rating) {
+        this.rating = rating;
     }
 
     public LocalDate getDate() {
@@ -43,12 +54,11 @@ public class Watchlist {
 
     @Override
     public String toString() {
-        return "Watchlist{" +
+        return "Rating{" +
                 "id=" + id +
+                ", rating=" + rating +
                 ", date=" + date +
                 ", movie=" + movie +
                 '}';
     }
-
-    // Just watch api to add StreamingServices attribute
 }
