@@ -9,5 +9,4 @@ public class LetterboxdApplication {
     public static void main(String[] args) {
         SpringApplication.run(LetterboxdApplication.class, args);
     }
-
 }

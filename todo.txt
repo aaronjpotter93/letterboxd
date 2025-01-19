@@ -1,0 +1,13 @@
+I want to add to the relationship entities for movies to incorporate:
+
+- overview
+- original language
+- release date
+- letterbox score
+- cast
+- crew
+- genres
+- keywords
+- budget
+- revenue
+- status
