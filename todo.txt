@@ -1,13 +1,48 @@
 I want to add to the relationship entities for movies to incorporate:
 
+v1
+tmdb attributes
+- adult
+- backdrop path
 - overview
-- original language
+- poster path
 - release date
-- letterbox score
+- runtime
+- status
+- title
+
+letterboxd details
+- letterboxd uri
+- watched
+- liked
+- rating
+
+v2
+tmdb attributes
+- adult
+- backdrop path
+- budget
+- genres
+- imdbID
+- original title
+- overview
+- poster path
+- production companies
+- release date
+- revenue
+- runtime
+- status
+- title
+- keywords
 - cast
 - crew
-- genres
-- keywords
-- budget
-- revenue
-- status
+
+letterboxd details
+- letterboxd uri
+- watched
+- times watched
+- liked
+- my letterbox rating
+- my reviews
+- all letterboxd ratings
+- my lists

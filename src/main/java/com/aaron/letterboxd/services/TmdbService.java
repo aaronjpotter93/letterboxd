@@ -55,6 +55,7 @@ public class TmdbService {
             logger.warning("Failed to fetch details for " + query + ". Status code: " + response.code());
         }
     }
+    // TODO * query movie details by movie_id
 
     // Fetch details for multiple movies
     public void bulkFetchMovieDetails(List<MovieCsvRecord> movieTitles) throws IOException, InterruptedException {

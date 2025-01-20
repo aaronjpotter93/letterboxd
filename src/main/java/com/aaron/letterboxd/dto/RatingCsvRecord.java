@@ -2,7 +2,7 @@ package com.aaron.letterboxd.dto;
 
 import com.opencsv.bean.CsvBindByName;
 
-public class MovieCsvRecord {
+public class RatingCsvRecord {
 
     @CsvBindByName(column = "Date")
     private String date;
@@ -16,12 +16,7 @@ public class MovieCsvRecord {
     @CsvBindByName(column = "Letterboxd URI")
     private String letterboxdUri;
 
-    private Boolean watchlist = false;
-
-    private Boolean watched = false;
-
-    private Boolean liked;
-
+    @CsvBindByName(column = "Rating")
     private Double rating;
 
     // Getters and setters
@@ -57,22 +52,6 @@ public class MovieCsvRecord {
         this.letterboxdUri = letterboxdUri;
     }
 
-    public Boolean getWatchlist() {
-        return watchlist;
-    }
-
-    public void setWatchlist(Boolean watchlist) {
-        this.watchlist = watchlist;
-    }
-
-    public Boolean getWatched() {
-        return watched;
-    }
-
-    public void setWatched(Boolean watched) {
-        this.watched = watched;
-    }
-
     public Double getRating() {
         return rating;
     }
@@ -81,23 +60,13 @@ public class MovieCsvRecord {
         this.rating = rating;
     }
 
-    public Boolean getLiked() {
-        return liked;
-    }
-
-    public void setLiked(Boolean liked) {
-        this.liked = liked;
-    }
-
     @Override
     public String toString() {
-        return "MovieCsvRecord{" +
+        return "RatingCsvRecord{" +
                 "date='" + date + '\'' +
                 ", name='" + name + '\'' +
                 ", year='" + year + '\'' +
                 ", letterboxdUri='" + letterboxdUri + '\'' +
-                ", watched=" + watched +
-                ", liked=" + liked +
                 ", rating=" + rating +
                 '}';
     }
