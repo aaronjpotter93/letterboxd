@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.aaron.letterboxd"},{"l":"com.aaron.letterboxd.controllers"},{"l":"com.aaron.letterboxd.dto"},{"l":"com.aaron.letterboxd.entities"},{"l":"com.aaron.letterboxd.services"},{"l":"com.aaron.letterboxd.utils"}];updateSearchResults();

@@ -1,0 +1,6 @@
+com.aaron.letterboxd
+com.aaron.letterboxd.controllers
+com.aaron.letterboxd.dto
+com.aaron.letterboxd.entities
+com.aaron.letterboxd.services
+com.aaron.letterboxd.utils
